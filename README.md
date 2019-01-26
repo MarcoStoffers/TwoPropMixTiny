@@ -1,2 +1,2 @@
 # TwoPropMixTiny
-![TwoPropMixTiny](marcostoffers.github.com/twopropmixtiny_1.png)
+![TwoPropMixTiny](https://marcostoffers.github.io/twopropmixtiny_1.png)
