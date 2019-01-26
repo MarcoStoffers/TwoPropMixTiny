@@ -1,19 +1,19 @@
 # TwoPropMixTiny
-## 2-Schrauben Mischer für ein RC-Modell mit 2 Antriebs-Schrauben, Ruder und Querstrahlruder
+## 2-prop mixer for RC model with 2 drive props, rudder and bow thruster
 ![TwoPropMixTiny](https://marcostoffers.github.io/twopropmixtiny_1.png)
 
-- Je nach Richtung wird der Kurven innere Motor gebremst oder auf Rückwärts geregelt (über ein Setup einstellbar). Die Empfindlichkeit, ab welcher Kurvenlage der Mischer eingreifen soll, kann über ein Poti eingestellt werden.
-- Wird ein Querstrahlruder mit verwendet, kann auch dieses zur Unterstützung der Kurvenfahrt mitverwendet werden (ebenfalls über Setup zuschaltbar). Bis zu welcher Geschwindigkeit das QSR eingreift, ist wiederrum mit dem 2. Poti regelbar.
+- Depending on the direction, the curve inner motor is braked or controlled to reverse (adjustable via a setup). The sensitivity at which curve position the mixer should intervene can be set via a potentiometer.
+- If a bow thruster is also used, this can also be used to support cornering (can also be switched on via setup). Up to which speed the bow thruster intervenes can be adjusted with the 2nd potentiometer.
 
-## Voraussetzung
-- Alle Motoren (Antrieb rechts, Antrieb links, Querstrahlruder) müssen über einen eigenen Fahtsteller verfügen und die beiden Antriebe gleich laufen (das Modell zieht bei Geradeausfahrt nicht zu einer Seite weg).
-- Das Modell ist über eine RC-Fernsteuerung "normal" fahrfähig (Vorwärts | Rückwärts | Links | Rechts | QSR Links | QSR Rechts)
-- Die Stromversorgung für das Modul (4,5V - 5,5V) ist sichergestellt (siehe Handbuch)
+## Requirement
+- All motors (right-hand drive, left-hand drive, bow thruster) must have their own speed controller and the two drives must run equally (the model does not pull away to one side when driving straight ahead).
+- The model can be "normally" driven via an RC remote control (Forward | Reverse | Left | Right | Bow Thruster Left | Bow Thruster Right)
+- The power supply for the module (4.5V - 5.5V) is guaranteed (see manual / only german at the moment).
 
 ## Basis
-Das Modul basiert auf einem Microchip ATtiny841, der über die [Arduino IDE](https://arduino.cc/) programmiert wird. Um den Mikrocontroller nutzen zu können, ist die Erweiterung von [Spence Konde](https://github.com/SpenceKonde/ATTinyCore) nötig. Programmiert wird ohne Bootloader direkt über die ISP Kontakte auf der Unterseite der Platine mit einem AVR-Programmer.
+The module is based on a microchip ATtiny841 which is programmed via the [Arduino IDE](https://arduino.cc/). To use the microcontroller, the extension of [Spence Konde](https://github.com/SpenceKonde/ATTinyCore) is necessary. Programming is done without a bootloader directly via the ISP contacts on the bottom side of the PCB with an AVR programmer.
 
 ## License
-Das Projekt steht unter der Creative Common License. Ein Nachbau für Privat oder gemeinnützlichen Vereinen ist erwünscht, kommerziellen Nachbau oder Vertrieb untersage ich. Sollte jemand den Mischer weiter entwickeln, bitte ich um die Nennung des Ursprungprojektes.
+The project is licensed under the Creative Common License. A rebuild for private or non-profit associations is desired, commercial rebuild or distribution I forbid. If someone should develop the mixer further, I ask for the naming of the original project.
 
 ![CreativeCommonLicense](https://marcostoffers.github.io/cc.png)
