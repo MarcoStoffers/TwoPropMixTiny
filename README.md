@@ -8,6 +8,7 @@
 ## Voraussetzung
 - Alle Motoren (Antrieb rechts, Antrieb links, Querstrahlruder) müssen über einen eigenen Fahtsteller verfügen und die beiden Antriebe gleich laufen (das Modell zieht bei Geradeausfahrt nicht zu einer Seite weg).
 - Das Modell ist über eine RC-Fernsteuerung "normal" fahrfähig (Vorwärts | Rückwärts | Links | Rechts | QSR Links | QSR Rechts)
+- Die Stromversorgung für das Modul (4,5V - 5,5V) ist sichergestellt (siehe Handbuch)
 
 ## Basis
 Das Modul basiert auf einem Microchip ATtiny841, der über die [Arduino IDE](https://arduino.cc/) programmiert wird. Um den Mikrocontroller nutzen zu können, ist die Erweiterung von [Spence Konde](https://github.com/SpenceKonde/ATTinyCore) nötig. Programmiert wird ohne Bootloader direkt über die ISP Kontakte auf der Unterseite der Platine mit einem AVR-Programmer.
