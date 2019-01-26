@@ -10,7 +10,7 @@
 - The model can be "normally" driven via an RC remote control (Forward | Reverse | Left | Right | Bow Thruster Left | Bow Thruster Right)
 - The power supply for the module (4.5V - 5.5V) is guaranteed (see manual / only german at the moment).
 
-## Basis
+## Base
 The module is based on a microchip ATtiny841 which is programmed via the [Arduino IDE](https://arduino.cc/). To use the microcontroller, the extension of [Spence Konde](https://github.com/SpenceKonde/ATTinyCore) is necessary. Programming is done without a bootloader directly via the ISP contacts on the bottom side of the PCB with an AVR programmer.
 
 ## License
