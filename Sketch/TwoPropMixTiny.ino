@@ -1,5 +1,5 @@
 /* ==========================================================================
-**  TwoPropMixTiny V1.0 
+**  TwoPropMixTiny V1.1 
 **
 **  Core: ATtiny841 / Dr.Azzy (http://drazzy.com/e/tiny841.shtml9)
 **
@@ -596,10 +596,12 @@ void start_rc_switch_input() {
 // Interrupt0 for RC Input
 // -----------------------------
 ISR (PCINT0_vect) {
+    uint8_t numberof = 0;
     for(uint8_t u = 0; u < 3; u++) {
         if(!digitalRead(pin_array[u+5]) && !measurement[u]) {         // if the PinChange Interrupt was triggered by corresponding pin and the old values where already calculated
           start_micros[u] = micros();                                 // remember the actual micros
           measurement[u] = true;                                      // and mark the measurement as active
+          numberof++;
         }
         if(digitalRead(pin_array[u+5]) && measurement[u]) {           // if the PinChange Interrupt was again triggered by corresponding pin and the measurement is active
           stop_micros[u] = micros();                                  // remeber the new micros position
@@ -619,6 +621,7 @@ ISR (PCINT0_vect) {
           else rc_ok[u] = false;                                      // set rc_ok to "one"
         } 
     }
+    if(numberof > 1) bitSet(GIFR,PCIF0);
 }
 
 // -----------------------------
